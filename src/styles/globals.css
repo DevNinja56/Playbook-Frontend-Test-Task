@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mainBackgroundColor {
+  background-image: linear-gradient(
+    to left bottom,
+    #1c3f51,
+    #1d3949,
+    #1d3341,
+    #1d2e39,
+    #1c2831,
+    #1b262e,
+    #1b242c,
+    #1a2229,
+    #1a232b,
+    #1a242c,
+    #1b252e,
+    #1b2630
+  );
+}
+
+.loader {
+  border: 3px solid #ffffff;
+  border-top: 3px solid #ffffff00;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
