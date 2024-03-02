@@ -60,7 +60,7 @@ const SignUp = () => {
             url="/images/google.svg"
             padding="p-4"
             className="w-full bg-white rounded-lg font-medium text-black gap-3 hover:bg-opacity-50"
-            text="Sign in with Google"
+            text="Sign up with Google"
           />
           <hr className="w-full border-1 border-gray-700" />
           <div className="flex flex-col w-full gap-[1.5rem]">
@@ -124,7 +124,7 @@ const SignUp = () => {
         >
           Already have an account?{" "}
           <span className="text-white group-hover:text-cyan-700 transition-all duration-300">
-            Log In
+            Sign In
           </span>
         </h3>
       </div>
