@@ -24,8 +24,14 @@ const Home = () => {
   const handleSubmit = async (value: { email: string }) => {
     setLoader(true);
     setLoginForm(value);
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-    router.push(ROUTES.OTP);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    router.push(
+      {
+        pathname: ROUTES.OTP,
+        query: { email: value.email },
+      },
+      ROUTES.OTP
+    );
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) =>
@@ -56,7 +62,7 @@ const Home = () => {
             className="w-full bg-white rounded-lg font-medium text-black gap-3 hover:bg-opacity-50"
             text="Sign in with Google"
           />
-          <hr className="w-full border-2 border-gray-700" />
+          <hr className="w-full border-1 border-gray-700" />
           <div className="flex flex-col w-full gap-[1.5rem]">
             <CommonInput
               {...register("email", { required: true })}

@@ -15,11 +15,14 @@ const Otp = () => {
 
   const router = useRouter();
 
+  const { email } = router.query;
+
   useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 640);
 
     window.addEventListener("resize", handleResize);
     handleResize();
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -119,7 +122,7 @@ const Otp = () => {
         <form className="flex flex-col gap-5 w-full items-center">
           <h1 className="text-center text-grayColor w-11/12">
             We’ve sent a code to{" "}
-            <span className="text-white">mike@fantasyplaybook.ai</span>{" "}
+            <span className="text-white">{email ?? ""}</span>{" "}
             <br className="block md:hidden" />
             Enter the 6 digit code to continue
           </h1>
